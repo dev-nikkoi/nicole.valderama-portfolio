@@ -427,28 +427,6 @@ footer {
   transform: translateY(0);
 }
 
-.cursor {
-  width: 14px;
-  height: 14px;
-  border: 1px solid var(--accent);
-  position: fixed;
-  left: 0;
-  top: 0;
-  border-radius: 4px;
-  pointer-events: none;
-  transform: translate3d(-7px, -7px, 0);
-  will-change: transform;
-  z-index: 99999;
-}
-
-@media (min-width: 900px) {
-  body.has-custom-cursor,
-  body.has-custom-cursor a,
-  body.has-custom-cursor button {
-    cursor: none;
-  }
-}
-
 @media (max-width: 900px) {
   .menu-btn {
     display: inline-flex;
