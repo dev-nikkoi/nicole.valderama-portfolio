@@ -432,9 +432,12 @@ footer {
   height: 14px;
   border: 1px solid var(--accent);
   position: fixed;
+  left: 0;
+  top: 0;
   border-radius: 4px;
   pointer-events: none;
-  transform: translate(-50%, -50%);
+  transform: translate3d(-7px, -7px, 0);
+  will-change: transform;
   z-index: 99999;
 }
 

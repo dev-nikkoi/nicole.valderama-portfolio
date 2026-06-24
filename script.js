@@ -37,8 +37,7 @@ if (window.matchMedia("(min-width: 900px)").matches) {
   function animateCursor() {
     cursorX += (mouseX - cursorX) * 0.16;
     cursorY += (mouseY - cursorY) * 0.16;
-    cursor.style.left = `${cursorX}px`;
-    cursor.style.top = `${cursorY}px`;
+    cursor.style.transform = `translate3d(${cursorX}px, ${cursorY}px, 0)`;
     requestAnimationFrame(animateCursor);
   }
 
