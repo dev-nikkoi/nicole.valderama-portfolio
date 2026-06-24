@@ -56,24 +56,21 @@ function typeText() {
   if (!typingElement) return;
 
   const currentText = typingTexts[textIndex];
-  typingElement.textContent = currentText.substring(0, charIndex);
 
   if (!isDeleting && charIndex < currentText.length) {
     charIndex++;
   } else if (isDeleting && charIndex > 0) {
     charIndex--;
-  }
-
-  if (!isDeleting && charIndex === currentText.length) {
+  } else if (!isDeleting && charIndex === currentText.length) {
     isDeleting = true;
     setTimeout(typeText, 1200);
     return;
-  }
-
-  if (isDeleting && charIndex === 0) {
+  } else if (isDeleting && charIndex === 0) {
     isDeleting = false;
     textIndex = (textIndex + 1) % typingTexts.length;
   }
+
+  typingElement.textContent = currentText.substring(0, charIndex);
 
   setTimeout(typeText, isDeleting ? 55 : 95);
 }
