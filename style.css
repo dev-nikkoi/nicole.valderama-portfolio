@@ -282,6 +282,12 @@ section,
   text-align: center;
 }
 
+.centered-text {
+  max-width: 760px;
+  margin: 0 auto 34px;
+  text-align: center;
+}
+
 .grid,
 .card-grid {
   display: grid;
