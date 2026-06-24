@@ -17,6 +17,34 @@ document.querySelectorAll(".nav-links a").forEach((link) => {
   }
 });
 
+// Custom cursor for desktop only
+if (window.matchMedia("(min-width: 900px)").matches) {
+  document.body.classList.add("has-custom-cursor");
+
+  const cursor = document.createElement("div");
+  cursor.classList.add("cursor");
+  document.body.appendChild(cursor);
+
+  let mouseX = 0;
+  let mouseY = 0;
+  let cursorX = 0;
+  let cursorY = 0;
+
+  document.addEventListener("mousemove", (event) => {
+    mouseX = event.clientX;
+    mouseY = event.clientY;
+  });
+
+  function animateCursor() {
+    cursorX += (mouseX - cursorX) * 0.16;
+    cursorY += (mouseY - cursorY) * 0.16;
+    cursor.style.transform = `translate3d(${cursorX}px, ${cursorY}px, 0)`;
+    requestAnimationFrame(animateCursor);
+  }
+
+  animateCursor();
+}
+
 // Typing effect on home page only
 const typingElement = document.getElementById("typing");
 const typingTexts = ["Nicole Valderama"];
