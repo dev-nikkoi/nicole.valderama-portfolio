@@ -18,7 +18,6 @@ Featured projects
 Contact information
 Interactive UI elements and animations
 
-It is built with a focus on clean design, smooth user experience, and responsiveness.
 
 🛠️ Tech Stack
 Frontend:
@@ -60,15 +59,12 @@ portfolio/
 │   ├── services.html
 │   └── tools.html
 │
-├── assets/
-│   ├── images/
-│   └── files/
+├── images/
+├── files/
 │
-├── css/
-│   └── style.css
+├── style.css
 │
-├── js/
-│   └── script.js
+├── script.js
 
 🚀 How to Run Locally
 
