@@ -353,8 +353,11 @@ section,
 
 .tool-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 18px;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 12px;
 }
 
 .tool-card {
